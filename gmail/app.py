@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 from Gmail import enviar_email
+import os
+import sys
 
 app = Flask(__name__)
 
@@ -50,4 +52,14 @@ def index():
     return render_template('form.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    # Suprime mensagens de log do Flask para execução em background
+    import logging
+    log = logging.getLogger('werkzeug')
+    log.setLevel(logging.ERROR)
+    
+    # Redireciona stdout para evitar output no console quando executado em background
+    if len(sys.argv) > 1 and sys.argv[1] == '--silent':
+        sys.stdout = open(os.devnull, 'w')
+        sys.stderr = open(os.devnull, 'w')
+    
+    app.run(host='127.0.0.1', port=5000, debug=False, use_reloader=False)
