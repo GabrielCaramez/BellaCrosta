@@ -8,8 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Cadastro de Produtos</title>
-    <link rel="icon" type="image/png" href="../image/Logo.png">
+    <title>Cadastro de Clientes</title>
+    <link rel="icon" type="image/png" href="image/Logo.png">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -55,7 +55,6 @@
                 Opções
             </div>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
             <ul class="navbar-nav bg-gradient-primary sidebar-dark accordion" id="accordionSidebar">
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -71,10 +70,8 @@
                             <a class="collapse-item" href="../Cliente/FormCadastroCliente.html">Clientes</a>
                             <a class="collapse-item" href="../Produto/FormCadastroProduto.html">Produtos</a>
                             <a class="collapse-item"
-                                href="../Reserva_Individual/FormCadastroReserva_Individual.html">Reservas
-                                Individuais</a>
-                            <a class="collapse-item" href="../Reserva_Eventos/FormCadastroReserva_Eventos.html">Reservas
-                                Eventos</a>
+                                href="../Reservas/FormCadastroReservas.html">Reservas
+                                </a>
                             <a class="collapse-item" href="#">Mesas</a>
                             <a class="collapse-item" href="../Estoque/FormCadastroEstoque.html">Estoque</a>
                         </div>
@@ -101,10 +98,8 @@
                                 <a class="collapse-item" href="../Cliente/FormConsultarCliente.php">Clientes</a>
                                 <a class="collapse-item" href="../Produto/FormConsultarProduto.php">Produtos</a>
                                 <a class="collapse-item"
-                                    href="../Reserva_Individual/FormConsultarReserva_Individual.php">Reservas
-                                    Individuais</a>
-                                <a class="collapse-item"
-                                    href="../Reserva_Eventos/FormConsultarReserva_Eventos.php">Reservas Eventos</a>
+                                    href="../Reservas/FormConsultarReservas.php">Reservas
+                                    </a>
                                 <a class="collapse-item" href="#">Mesas</a>
                                 <a class="collapse-item" href="../Estoque/FormConsultarEstoque.php">Estoque</a>
                             </div>
@@ -115,7 +110,8 @@
         </ul>
         <!-- End of Sidebar -->
 
-        <div id="content-wrapper" class="d-flex flex-column" <!-- Topbar -->
+        <div id="content-wrapper" class="d-flex flex-column">
+             <!-- Topbar -->
             <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" id="navbar-color">
 
                 <!-- Sidebar Toggle (Topbar) -->
@@ -204,21 +200,35 @@
                                     <div class="col-lg-6">
                                         <div class="p-5">
                                             <div class="text-center">
-                                                <h1 class="h4 text-gray-900 mb-4">Cadastro de Estoque</h1>
+                                                <h1 class="h4 text-gray-900 mb-4">Cadastro de Reservas</h1>
                                             </div>
-                                            <form class="user" action="CadastrarEstoque.php" method="post"
-                                                enctype="multipart/form-data">
+                                            <form class="user" action="CadastrarReservas.php" method="post">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control form-control-user"
-                                                        id="exampleInputNome" aria-describedby="emailHelp" name="nome"
-                                                        placeholder="Digite o nome do produto">
+                                                        id="exampleInputNome" aria-describedby="emailHelp"
+                                                        name="nome_cliente" placeholder="Digite o nome do cliente"
+                                                        required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control form-control-user"
+                                                        id="exampleInputCpf" name="data"
+                                                        placeholder="informe a data " required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="time" class="form-control form-control-user"
+                                                        id="exampleInputCpf" name="hora"
+                                                        placeholder="informe a hora" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="text" class="form-control form-control-user"
-                                                        id="exampleInputCpf" name="quantidade"
-                                                        placeholder="Digite a quantidade">
+                                                        id="exampleInputEmail" name="taxa" placeholder="Valor da taxa"
+                                                        required>
                                                 </div>
-                                                <hr>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control form-control-user"
+                                                        id="exampleInputTelefone" name="descricao"
+                                                        placeholder="Digite uma descrição">
+                                                </div>
                                                 <button class="btn btn-primary btn-user btn-block">
                                                     Cadastrar </button>
                                             </form>
