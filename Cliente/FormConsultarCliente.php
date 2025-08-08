@@ -40,9 +40,9 @@
             <!-- Heading -->
             <div class="sidebar-heading">
                 Opções
-            </div>
+            </div> 
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Utilities Collapse Menu -->
             <ul class="navbar-nav bg-gradient-primary sidebar-dark accordion" id="accordionSidebar">
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -57,12 +57,7 @@
                                 href="../Funcionario/FormCadastrarFuncionario.html">Funcionários</a>
                             <a class="collapse-item" href="../Cliente/FormCadastroCliente.html">Clientes</a>
                             <a class="collapse-item" href="../Produto/FormCadastroProduto.html">Produtos</a>
-                            <a class="collapse-item"
-                                href="../Reserva_Individual/FormCadastroReserva_Individual.html">Reservas
-                                Individuais</a>
-                            <a class="collapse-item" href="../Reserva_Eventos/FormCadastroReserva_Eventos.html">Reservas
-                                Eventos</a>
-                            <a class="collapse-item" href="#">Mesas</a>
+                            <a class="collapse-item" href="../Reservas/FormCadastroReservas.html">Reservas</a>
                             <a class="collapse-item" href="../Estoque/FormCadastroEstoque.html">Estoque</a>
                         </div>
                     </div>
@@ -87,18 +82,14 @@
                                     href="../Funcionario/FormConsultarFuncionario.php">Funcionários</a>
                                 <a class="collapse-item" href="../Cliente/FormConsultarCliente.php">Clientes</a>
                                 <a class="collapse-item" href="../Produto/FormConsultarProduto.php">Produtos</a>
-                                <a class="collapse-item"
-                                    href="../Reserva_Individual/FormConsultarReserva_Individual.php">Reservas
-                                    Individuais</a>
-                                <a class="collapse-item"
-                                    href="../Reserva_Eventos/FormConsultarReserva_Eventos.php">Reservas Eventos</a>
-                                <a class="collapse-item" href="#">Mesas</a>
+                                <a class="collapse-item" href="../Reservas/FormConsultarReservas.php">Reservas</a>
                                 <a class="collapse-item" href="../Estoque/FormConsultarEstoque.php">Estoque</a>
                             </div>
                         </div>
                     </div>
                 </li>
             </ul>
+        </ul>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

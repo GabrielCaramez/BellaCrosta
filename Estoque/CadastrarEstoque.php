@@ -2,10 +2,11 @@
 <html>
     <body>
         <?php
-        $status = $_POST["status"];
+        $nome = $_POST["nome"];
+        $quantidade = $_POST["quantidade"];
         $conn = mysqli_connect($servidor, $dbusuario, $dbsenha, $dbname);
         mysqli_select_db($conn, 'db_bellacrosta');
-        $sql = "INSERT INTO tb_pedidos(status) VALUES ('$status')";
+        $sql = "INSERT INTO tb_estoque(nome, quantidade) VALUES ('$nome', '$quantidade')";
         if (mysqli_query($conn, $sql)) {
             echo "<script>alert('Seus dados foram salvos !'); window.location = '../index.php';</script>";
         } else {
